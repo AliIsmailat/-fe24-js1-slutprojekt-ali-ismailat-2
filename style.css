@@ -1,0 +1,270 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+:root{
+    --primary-color: #423361;
+    --secondary-color: #1b0e35;
+}
+
+
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+
+    background-color: var(--primary-color);
+
+}
+
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+}
+
+
+
+.search{
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+}
+
+.search:focus{
+    background-color: var(--primary-color)
+
+}
+
+.search::placeholder{
+    color: rgba(255, 255, 255, 0.505);
+    
+}
+
+
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.movie{
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.4px 4px 5px rgba(0,0,0,0.1);
+    background-color: var(--secondary-color );
+    position: relative;
+    overflow: hidden;
+}
+
+
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+    margin-top: 0;
+    text-align: left;
+}
+
+
+
+.overview{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 1rem;
+    max-height: 100%;
+
+    transform: translateY(101%);
+    transition:transform 0.2s ease-in
+
+}
+
+
+
+.movie:hover .overview{
+    transform:translateY(0)
+    
+}
+
+
+
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbarlinks{
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbarlinks li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.navbarlinks li a:hover{
+    background-color: var(--primary-color);
+    color: lightgray;
+    text-decoration: underline;
+}
+
+
+
+
+
+.pageInfo{
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+}
+
+
+.welcome{
+    color: white;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+    margin-top: 10rem;
+
+    margin-bottom: 5rem;
+
+    font-size: 3rem;
+}
+
+.searchBar{
+    color: white;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+    font-size: 1.8rem;
+  
+    font-style: italic;
+    text-decoration: underline;
+}
+
+ 
+
+
+
+/*temp*/
+
+
+.actor{
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.4px 4px 5px rgba(0,0,0,0.1);
+    background-color: var(--secondary-color );
+    position: relative;
+    overflow: hidden;
+}
+
+
+.actor-info{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    padding: 1rem;
+    max-height: 100%;
+
+
+
+    transform: translateY(101%);
+    transition:transform 0.2s ease-in
+
+}
+
+
+.actor img{
+    width: 100%;
+}
+
+
+.actor:hover .actor-info{
+    transform:translateY(0)
+    
+}
+
+.actor h2{
+    color: white;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+}
+
+
+.noResults h2{
+    color: white;
+    text-align: center;
+}
+
+.actorsNoResults h2{
+    color: white;
+    text-align: center;
+}
+
+
+.errorMessage{
+    color: white;
+    margin-top: 3rem;
+}
+
+.active a{
+    background-color: var(--primary-color);
+}
+
+
+#releaseDate{
+    color: white;
+}
+
+#releaseDate p{
+    background-color: var(--primary-color);
+    padding: 4px;
+    border-radius: 2px;
+}
